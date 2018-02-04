@@ -1,0 +1,19 @@
+#!/bin/zsh
+echo domainfinderをビルドしています...
+go build -o domainfinder
+echo synonymsをビルドしています...
+cd ../synonyms
+go build -o ../domainfinder/lib/synonyms
+echo availableをビルドしています...
+cd ../available
+go build -o ../domainfinder/lib/available
+echo sprinkleをビルドしています...
+cd ../sprinkle
+go build -o ../domainfinder/lib/sprinkle
+echo coolifyをビルドしています...
+cd ../coolify
+go build -o ../domainfinder/lib/coolify
+echo domainifyをビルドしています...
+cd ../domainify
+go build -o ../domainfinder/lib/domainify
+echo done
